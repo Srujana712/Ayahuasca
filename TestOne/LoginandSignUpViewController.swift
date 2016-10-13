@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class LoginandSignUpViewController: UIViewController {
 
     @IBOutlet weak var signIn: UIButton!
@@ -49,7 +50,6 @@ class LoginandSignUpViewController: UIViewController {
  
         let firstSetSegmentsViewController: UIViewController = storyBoard.instantiateViewControllerWithIdentifier("firstSetSegments")
         self.navigationController?.pushViewController(firstSetSegmentsViewController, animated: true)
-        
     }
     
     @IBAction func forgotUsrPwd() {

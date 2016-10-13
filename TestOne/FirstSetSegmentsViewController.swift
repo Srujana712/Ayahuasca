@@ -11,10 +11,9 @@ import UIKit
 class FirstSetSegmentsViewController: UIViewController {
     
     @IBOutlet weak var containerOrg: UIView!
-    
     @IBOutlet weak var firstSetSegments: UISegmentedControl!
-    
-    weak var segmentedViewController: UIViewController?
+
+    var containerView: ContainerOneViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +23,34 @@ class FirstSetSegmentsViewController: UIViewController {
 
     @IBAction func switchContainerViews(sender: AnyObject) {
         
-        if firstSetSegments.selectedSegmentIndex == 0 || firstSetSegments.selectedSegmentIndex == 1 || firstSetSegments.selectedSegmentIndex == 2{
-            UIView.animateWithDuration(0.5, animations: {
-                self.containerOrg.alpha = 1
-                
-            })
-        }else if firstSetSegments.selectedSegmentIndex == 3{
-            
-            var inputViewController: UIViewController?
-            inputViewController = self.storyboard?.instantiateViewControllerWithIdentifier("inputViewController")
-            inputViewController!.view.translatesAutoresizingMaskIntoConstraints = false
-            self.addChildViewController(inputViewController!)
-            
-//            UIView.animateWithDuration(0.5, animations: {
-//                self.containerOrg.alpha = 0
-//            })
+        switch firstSetSegments.selectedSegmentIndex {
+        case 0:
+              containerView!.segueIndentifierRecievedFromParent("organizer")
+        case 1:
+            containerView!.segueIndentifierRecievedFromParent("input")
+        case 2:
+            containerView!.segueIndentifierRecievedFromParent("analysis")
+        case 3:
+            containerView!.segueIndentifierRecievedFromParent("synthesis")
+
+        default:
+            containerView!.segueIndentifierRecievedFromParent("organizer")
+
+        }
+        
+//        if firstSetSegments.selectedSegmentIndex == 0 || firstSetSegments.selectedSegmentIndex == 1 || firstSetSegments.selectedSegmentIndex == 2{
+//            
+//            containerView!.segueIndentifierRecievedFromParent("organizer")
+//            
+//        }else if firstSetSegments.selectedSegmentIndex == 3{
+//            
+//            containerView!.segueIndentifierRecievedFromParent("input")
+//        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "containerOne"{
+            containerView = segue.destinationViewController as? ContainerOneViewController
         }
     }
     

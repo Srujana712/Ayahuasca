@@ -76,6 +76,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ltN-M5-MaC">
+                                <rect key="frame" x="-4" y="77" width="328" height="491"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="NM4-IE-oOs" kind="embed" identifier="containerOne" id="Ft0-RL-LpD"/>
+                                </connections>
+                            </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="r0k-9j-OgI">
                                 <rect key="frame" x="20" y="41" width="280" height="29"/>
                                 <segments>
@@ -88,22 +95,16 @@
                                     <action selector="switchContainerViews:" destination="8I9-jS-UAx" eventType="valueChanged" id="l1q-ZF-qAy"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ltN-M5-MaC">
-                                <rect key="frame" x="-3" y="77" width="326" height="483"/>
-                                <connections>
-                                    <segue destination="NM4-IE-oOs" kind="embed" id="Ft0-RL-LpD"/>
-                                </connections>
-                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2AI-De-DsF" firstAttribute="top" secondItem="ltN-M5-MaC" secondAttribute="bottom" constant="8" symbolic="YES" id="4Y0-5g-hbZ"/>
-                            <constraint firstItem="ltN-M5-MaC" firstAttribute="leading" secondItem="FTe-op-Dyn" secondAttribute="leadingMargin" constant="-18" id="7pu-cm-g0P"/>
+                            <constraint firstItem="2AI-De-DsF" firstAttribute="top" secondItem="ltN-M5-MaC" secondAttribute="bottom" id="4Y0-5g-hbZ"/>
+                            <constraint firstItem="ltN-M5-MaC" firstAttribute="leading" secondItem="FTe-op-Dyn" secondAttribute="leadingMargin" constant="-20" id="7pu-cm-g0P"/>
                             <constraint firstItem="r0k-9j-OgI" firstAttribute="leading" secondItem="FTe-op-Dyn" secondAttribute="leadingMargin" constant="4" id="Ddq-D5-uSf"/>
-                            <constraint firstItem="ltN-M5-MaC" firstAttribute="centerX" secondItem="FTe-op-Dyn" secondAttribute="centerX" constant="1" id="Eso-dp-Qzt"/>
+                            <constraint firstItem="ltN-M5-MaC" firstAttribute="centerX" secondItem="FTe-op-Dyn" secondAttribute="centerX" id="Eso-dp-Qzt"/>
                             <constraint firstItem="r0k-9j-OgI" firstAttribute="top" secondItem="eeD-N5-OwY" secondAttribute="bottom" constant="21" id="Mit-Dh-4Kd"/>
                             <constraint firstItem="ltN-M5-MaC" firstAttribute="top" secondItem="r0k-9j-OgI" secondAttribute="bottom" constant="8" symbolic="YES" id="hQM-2D-d0o"/>
-                            <constraint firstItem="r0k-9j-OgI" firstAttribute="centerX" secondItem="ltN-M5-MaC" secondAttribute="centerX" constant="-1" id="otc-Et-mEw"/>
+                            <constraint firstItem="r0k-9j-OgI" firstAttribute="centerX" secondItem="ltN-M5-MaC" secondAttribute="centerX" id="otc-Et-mEw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d2b-fN-tqH"/>
@@ -252,10 +253,10 @@
             </objects>
             <point key="canvasLocation" x="1004" y="340"/>
         </scene>
-        <!--View Controller-->
+        <!--Container One View Controller-->
         <scene sceneID="SfX-Dw-dgp">
             <objects>
-                <viewController storyboardIdentifier="organizerViewController" id="NM4-IE-oOs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="organizerViewController" id="NM4-IE-oOs" customClass="ContainerOneViewController" customModule="TestOne" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EoZ-rL-Ng4"/>
                         <viewControllerLayoutGuide type="bottom" id="gyu-gr-bRi"/>
@@ -263,32 +264,150 @@
                     <view key="view" contentMode="scaleToFill" id="3Ra-ag-B2R">
                         <rect key="frame" x="0.0" y="0.0" width="326" height="482"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="326" height="482"/>
+                    <connections>
+                        <segue destination="MmK-Hh-Sbq" kind="push" identifier="organizerSegue" customClass="ContainerOneSegueController" customModule="TestOne" customModuleProvider="target" id="qJI-gN-gZ3"/>
+                        <segue destination="jtc-u0-ixf" kind="push" identifier="inputSegue" customClass="ContainerOneSegueController" customModule="TestOne" customModuleProvider="target" id="sD1-YL-OTn"/>
+                        <segue destination="Eqq-x3-oIV" kind="push" identifier="analysisSegue" customClass="ContainerOneSegueController" customModule="TestOne" customModuleProvider="target" id="74G-QX-fCb"/>
+                        <segue destination="UYc-zb-PgY" kind="push" identifier="synthesisSegue" customClass="ContainerOneSegueController" customModule="TestOne" customModuleProvider="target" id="skA-kG-M8s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veS-lP-Dey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654" y="961.5"/>
+            <point key="canvasLocation" x="1531" y="1004"/>
         </scene>
-        <!--View Controller-->
+        <!--Organizer View Controller-->
         <scene sceneID="dYg-AW-0Ec">
             <objects>
-                <viewController storyboardIdentifier="inputViewController" id="MmK-Hh-Sbq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="inputViewController" id="MmK-Hh-Sbq" customClass="OrganizerViewController" customModule="TestOne" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KlR-E4-obz"/>
                         <viewControllerLayoutGuide type="bottom" id="7dm-fx-9uP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qdl-wf-Kxd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="428"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CR7-yU-RKt"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="326" height="428"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODm-IP-vbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2005" y="1004"/>
+            <point key="canvasLocation" x="1986" y="892"/>
+        </scene>
+        <!--Analysis View Controller-->
+        <scene sceneID="Cc2-a9-H8c">
+            <objects>
+                <viewController id="Eqq-x3-oIV" customClass="AnalysisViewController" customModule="TestOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sz0-o2-OXm"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Xy-yZ-Xna"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EaP-i7-eg1">
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="482"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.68950287278501254" green="0.85544111976447679" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y0y-xN-51A"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="326" height="482"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nWm-Sa-0m4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1666" y="1663"/>
+        </scene>
+        <!--Input View Controller-->
+        <scene sceneID="Or3-oi-SVK">
+            <objects>
+                <viewController id="jtc-u0-ixf" customClass="InputViewController" customModule="TestOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fK6-sF-8J4"/>
+                        <viewControllerLayoutGuide type="bottom" id="tR6-Ap-7sg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0xt-ax-XHw">
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="428"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZc-un-WeM">
+                                <rect key="frame" x="34" y="88" width="258" height="140"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZ5-pN-6Nl">
+                                <rect key="frame" x="236" y="50" width="42" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="io6-du-eQw"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneActionPickerView:" destination="jtc-u0-ixf" eventType="touchUpInside" id="nyU-ra-6Ef"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMR-2a-Zem">
+                                <rect key="frame" x="101" y="20" width="151" height="30"/>
+                                <state key="normal" title="Select your input type"/>
+                                <connections>
+                                    <action selector="selectInputAction:" destination="jtc-u0-ixf" eventType="touchUpInside" id="CRZ-Q5-Fja"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkQ-pT-DA6">
+                                <rect key="frame" x="41" y="50" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelActionPickerView:" destination="jtc-u0-ixf" eventType="touchUpInside" id="DlL-eu-96c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="KkQ-pT-DA6" firstAttribute="baseline" secondItem="eZ5-pN-6Nl" secondAttribute="baseline" id="1bO-bV-IzX"/>
+                            <constraint firstItem="YMR-2a-Zem" firstAttribute="top" secondItem="0xt-ax-XHw" secondAttribute="top" constant="20" symbolic="YES" id="2pw-YP-DUY"/>
+                            <constraint firstItem="YMR-2a-Zem" firstAttribute="leading" secondItem="0xt-ax-XHw" secondAttribute="leadingMargin" constant="68" id="3vd-FW-u5p"/>
+                            <constraint firstItem="eZc-un-WeM" firstAttribute="centerX" secondItem="0xt-ax-XHw" secondAttribute="centerX" id="B78-QG-Qq9"/>
+                            <constraint firstItem="eZc-un-WeM" firstAttribute="leading" secondItem="0xt-ax-XHw" secondAttribute="leadingMargin" constant="18" id="Ivf-ft-rbm"/>
+                            <constraint firstItem="tR6-Ap-7sg" firstAttribute="top" secondItem="eZc-un-WeM" secondAttribute="bottom" constant="200" id="ckj-xL-5zx"/>
+                            <constraint firstItem="KkQ-pT-DA6" firstAttribute="leading" secondItem="0xt-ax-XHw" secondAttribute="leadingMargin" constant="25" id="fQ6-vs-XRI"/>
+                            <constraint firstItem="KkQ-pT-DA6" firstAttribute="top" secondItem="fK6-sF-8J4" secondAttribute="bottom" constant="50" id="g3x-7u-xZV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eZ5-pN-6Nl" secondAttribute="trailing" constant="32" id="gFw-Ir-eH9"/>
+                            <constraint firstItem="eZc-un-WeM" firstAttribute="top" secondItem="KkQ-pT-DA6" secondAttribute="bottom" constant="8" symbolic="YES" id="jLK-1M-g0n"/>
+                            <constraint firstItem="KkQ-pT-DA6" firstAttribute="top" secondItem="eZ5-pN-6Nl" secondAttribute="top" id="pa5-ct-hYI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Ha-Vk-oZm"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="326" height="428"/>
+                    <connections>
+                        <outlet property="inputPickerView" destination="eZc-un-WeM" id="kZV-lD-cCk"/>
+                        <outlet property="pickerCancelBtn" destination="KkQ-pT-DA6" id="9pE-im-1Qo"/>
+                        <outlet property="pickerDoneBtn" destination="eZ5-pN-6Nl" id="uJw-YP-rnd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVe-Rz-0a4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2020" y="1375"/>
+        </scene>
+        <!--Synthesis View Controller-->
+        <scene sceneID="7rf-pV-9bs">
+            <objects>
+                <viewController id="UYc-zb-PgY" customClass="SynthesisViewController" customModule="TestOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E9L-i8-N4K"/>
+                        <viewControllerLayoutGuide type="bottom" id="DcJ-Ha-NVB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eXE-vE-wvP">
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="482"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.89188957636434885" blue="0.99251674781724186" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ezD-Z5-7Vc"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="326" height="482"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RBG-dV-hho" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1314" y="1663"/>
         </scene>
     </scenes>
 </document>
