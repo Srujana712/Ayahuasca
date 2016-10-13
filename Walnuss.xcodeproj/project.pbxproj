@@ -10,6 +10,12 @@
 		2128A4941DA6E9E400B54E21 /* SignUpandRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2128A4931DA6E9E400B54E21 /* SignUpandRegisterViewController.swift */; };
 		21304E201DA57D6C0001475C /* LoginandSignUpViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 21DE6AB61D9AEEDD00F841D0 /* LoginandSignUpViewController.swift */; };
 		219190271DA8434B00367FED /* FirstSetSegmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219190261DA8434B00367FED /* FirstSetSegmentsViewController.swift */; };
+		21C72F1B1DAFDA3D0048396F /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C72F151DAFDA3D0048396F /* AnalysisViewController.swift */; };
+		21C72F1C1DAFDA3D0048396F /* ContainerOneSegueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C72F161DAFDA3D0048396F /* ContainerOneSegueController.swift */; };
+		21C72F1D1DAFDA3D0048396F /* ContainerOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C72F171DAFDA3D0048396F /* ContainerOneViewController.swift */; };
+		21C72F1E1DAFDA3D0048396F /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C72F181DAFDA3D0048396F /* InputViewController.swift */; };
+		21C72F1F1DAFDA3D0048396F /* OrganizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C72F191DAFDA3D0048396F /* OrganizerViewController.swift */; };
+		21C72F201DAFDA3D0048396F /* SynthesisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C72F1A1DAFDA3D0048396F /* SynthesisViewController.swift */; };
 		21DE6AB51D9AEEDD00F841D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE6AB41D9AEEDD00F841D0 /* AppDelegate.swift */; };
 		21DE6AB71D9AEEDD00F841D0 /* LoginandSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE6AB61D9AEEDD00F841D0 /* LoginandSignUpViewController.swift */; };
 		21DE6ABA1D9AEEDD00F841D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DE6AB81D9AEEDD00F841D0 /* Main.storyboard */; };
@@ -40,6 +46,12 @@
 /* Begin PBXFileReference section */
 		2128A4931DA6E9E400B54E21 /* SignUpandRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpandRegisterViewController.swift; sourceTree = "<group>"; };
 		219190261DA8434B00367FED /* FirstSetSegmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstSetSegmentsViewController.swift; sourceTree = "<group>"; };
+		21C72F151DAFDA3D0048396F /* AnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
+		21C72F161DAFDA3D0048396F /* ContainerOneSegueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerOneSegueController.swift; sourceTree = "<group>"; };
+		21C72F171DAFDA3D0048396F /* ContainerOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerOneViewController.swift; sourceTree = "<group>"; };
+		21C72F181DAFDA3D0048396F /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		21C72F191DAFDA3D0048396F /* OrganizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerViewController.swift; sourceTree = "<group>"; };
+		21C72F1A1DAFDA3D0048396F /* SynthesisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynthesisViewController.swift; sourceTree = "<group>"; };
 		21DE6AB11D9AEEDD00F841D0 /* Walnuss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walnuss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21DE6AB41D9AEEDD00F841D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21DE6AB61D9AEEDD00F841D0 /* LoginandSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginandSignUpViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +117,12 @@
 		21DE6AB31D9AEEDD00F841D0 /* Walnuss */ = {
 			isa = PBXGroup;
 			children = (
+				21C72F151DAFDA3D0048396F /* AnalysisViewController.swift */,
+				21C72F161DAFDA3D0048396F /* ContainerOneSegueController.swift */,
+				21C72F171DAFDA3D0048396F /* ContainerOneViewController.swift */,
+				21C72F181DAFDA3D0048396F /* InputViewController.swift */,
+				21C72F191DAFDA3D0048396F /* OrganizerViewController.swift */,
+				21C72F1A1DAFDA3D0048396F /* SynthesisViewController.swift */,
 				21DE6AB41D9AEEDD00F841D0 /* AppDelegate.swift */,
 				21DE6AB61D9AEEDD00F841D0 /* LoginandSignUpViewController.swift */,
 				219190261DA8434B00367FED /* FirstSetSegmentsViewController.swift */,
@@ -271,10 +289,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C72F1F1DAFDA3D0048396F /* OrganizerViewController.swift in Sources */,
+				21C72F1E1DAFDA3D0048396F /* InputViewController.swift in Sources */,
 				219190271DA8434B00367FED /* FirstSetSegmentsViewController.swift in Sources */,
+				21C72F1C1DAFDA3D0048396F /* ContainerOneSegueController.swift in Sources */,
 				21DE6AB71D9AEEDD00F841D0 /* LoginandSignUpViewController.swift in Sources */,
+				21C72F1B1DAFDA3D0048396F /* AnalysisViewController.swift in Sources */,
 				21DE6AB51D9AEEDD00F841D0 /* AppDelegate.swift in Sources */,
 				2128A4941DA6E9E400B54E21 /* SignUpandRegisterViewController.swift in Sources */,
+				21C72F201DAFDA3D0048396F /* SynthesisViewController.swift in Sources */,
+				21C72F1D1DAFDA3D0048396F /* ContainerOneViewController.swift in Sources */,
 				21DE6ABD1D9AEEDD00F841D0 /* TestOne.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
