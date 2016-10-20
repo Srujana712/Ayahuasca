@@ -29,18 +29,18 @@ class LoginandSignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_animated: Bool) {
+    override func viewWillAppear(_ _animated: Bool) {
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    override func viewWillDisappear(_animated: Bool) {
+    override func viewWillDisappear(_ _animated: Bool) {
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
-    @IBAction func userSignUp(sender: AnyObject) {
+    @IBAction func userSignUp(_ sender: AnyObject) {
 
-        let signViewController: UIViewController = storyBoard.instantiateViewControllerWithIdentifier("createProfilePage")
+        let signViewController: UIViewController = storyBoard.instantiateViewController(withIdentifier: "createProfilePage")
         self.navigationController?.pushViewController(signViewController, animated: true)
     }
     
@@ -48,7 +48,7 @@ class LoginandSignUpViewController: UIViewController {
         
 //          self.performSegueWithIdentifier("firstSetSegments", sender: self)
  
-        let firstSetSegmentsViewController: UIViewController = storyBoard.instantiateViewControllerWithIdentifier("firstSetSegments")
+        let firstSetSegmentsViewController: UIViewController = storyBoard.instantiateViewController(withIdentifier: "firstSetSegments")
         self.navigationController?.pushViewController(firstSetSegmentsViewController, animated: true)
     }
     

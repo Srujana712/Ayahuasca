@@ -21,7 +21,7 @@ class FirstSetSegmentsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func switchContainerViews(sender: AnyObject) {
+    @IBAction func switchContainerViews(_ sender: AnyObject) {
         
         switch firstSetSegments.selectedSegmentIndex {
         case 0:
@@ -48,9 +48,9 @@ class FirstSetSegmentsViewController: UIViewController {
 //        }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "containerOne"{
-            containerView = segue.destinationViewController as? ContainerOneViewController
+            containerView = segue.destination as? ContainerOneViewController
         }
     }
     

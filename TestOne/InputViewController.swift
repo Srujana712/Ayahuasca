@@ -34,35 +34,35 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func selectInputAction(sender: AnyObject) {
-        self.inputPickerView.hidden = false
-        self.pickerCancelBtn.hidden = false
-        self.pickerDoneBtn.hidden = false
+    @IBAction func selectInputAction(_ sender: AnyObject) {
+        self.inputPickerView.isHidden = false
+        self.pickerCancelBtn.isHidden = false
+        self.pickerDoneBtn.isHidden = false
     }
 
-    func numberOfComponentsInPickerView(picker: UIPickerView) -> Int{
+    func numberOfComponents(in picker: UIPickerView) -> Int{
         return 1
     }
     
-    func pickerView(picker: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+    func pickerView(_ picker: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         return pickerData.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
-    @IBAction func cancelActionPickerView(sender: AnyObject) {
+    @IBAction func cancelActionPickerView(_ sender: AnyObject) {
         
-        self.inputPickerView.hidden = true
-        self.pickerCancelBtn.hidden = true
-        self.pickerDoneBtn.hidden = true
+        self.inputPickerView.isHidden = true
+        self.pickerCancelBtn.isHidden = true
+        self.pickerDoneBtn.isHidden = true
     }
 
-    @IBAction func doneActionPickerView(sender: AnyObject) {
+    @IBAction func doneActionPickerView(_ sender: AnyObject) {
         
-        self.inputPickerView.hidden = true
-        self.pickerDoneBtn.hidden = true
-        self.pickerCancelBtn.hidden = true
+        self.inputPickerView.isHidden = true
+        self.pickerDoneBtn.isHidden = true
+        self.pickerCancelBtn.isHidden = true
     }
     /*
     // MARK: - Navigation

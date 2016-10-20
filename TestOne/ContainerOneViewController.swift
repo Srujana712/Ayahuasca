@@ -20,9 +20,9 @@ class ContainerOneViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.segueIdentifier = "organizerSegue"
-        self.performSegueWithIdentifier(self.segueIdentifier, sender: nil)
+        self.performSegue(withIdentifier: self.segueIdentifier, sender: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,38 +30,38 @@ class ContainerOneViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func segueIndentifierRecievedFromParent(segmentedControl: String){
+    func segueIndentifierRecievedFromParent(_ segmentedControl: String){
         if segmentedControl == "organizer"{
             
             self.segueIdentifier = "organizerSegue"
-            self.performSegueWithIdentifier(self.segueIdentifier, sender: nil)
+            self.performSegue(withIdentifier: self.segueIdentifier, sender: nil)
             
         }else if segmentedControl == "input"{
             
             self.segueIdentifier = "inputSegue"
-            self.performSegueWithIdentifier(self.segueIdentifier, sender: nil)
+            self.performSegue(withIdentifier: self.segueIdentifier, sender: nil)
         }
         else if segmentedControl == "analysis"{
             self.segueIdentifier = "analysisSegue"
-            self.performSegueWithIdentifier(self.segueIdentifier, sender: nil)
+            self.performSegue(withIdentifier: self.segueIdentifier, sender: nil)
         }
             else if segmentedControl == "synthesis"{
                 self.segueIdentifier = "synthesisSegue"
-                self.performSegueWithIdentifier(self.segueIdentifier, sender: nil)
+                self.performSegue(withIdentifier: self.segueIdentifier, sender: nil)
         }
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueIdentifier{
             if lastViewController != nil{
                 self.lastViewController.view.removeFromSuperview()
             }
             
-            vc = segue.destinationViewController 
+            vc = segue.destination 
             self.addChildViewController(vc)
             vc.view.frame = CGRect(x:0, y:0, width: self.view.frame.width, height: self.view.frame.height)
             self.view.addSubview(vc.view)
-            vc.didMoveToParentViewController(self)
+            vc.didMove(toParentViewController: self)
             lastViewController = vc
         }
     }

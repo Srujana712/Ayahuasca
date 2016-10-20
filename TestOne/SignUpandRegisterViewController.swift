@@ -26,17 +26,17 @@ class SignUpandRegisterViewController: UIViewController, UIImagePickerController
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func selectProfilePicture(sender: AnyObject) {
+    @IBAction func selectProfilePicture(_ sender: AnyObject) {
         
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        self.presentViewController(imagePicker, animated:true, completion: nil)
+        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        self.present(imagePicker, animated:true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         profilePicImageViwe.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 
     /*
