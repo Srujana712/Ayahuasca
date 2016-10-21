@@ -357,15 +357,30 @@
                     <view key="view" contentMode="scaleToFill" id="EaP-i7-eg1">
                         <rect key="frame" x="0.0" y="0.0" width="326" height="482"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.68950287278501254" green="0.85544111976447679" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLp-kK-DLU" customClass="BarChartView" customModule="Charts">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nLp-kK-DLU" firstAttribute="trailing" secondItem="EaP-i7-eg1" secondAttribute="trailingMargin" id="6ZG-R3-O3y"/>
+                            <constraint firstItem="nLp-kK-DLU" firstAttribute="top" secondItem="Sz0-o2-OXm" secondAttribute="bottom" id="GQr-9h-LVr"/>
+                            <constraint firstItem="nLp-kK-DLU" firstAttribute="leading" secondItem="EaP-i7-eg1" secondAttribute="leadingMargin" id="Oh8-Rh-CdF"/>
+                            <constraint firstItem="8Xy-yZ-Xna" firstAttribute="top" secondItem="nLp-kK-DLU" secondAttribute="bottom" id="ybV-0V-54d"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="Y0y-xN-51A"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="326" height="482"/>
+                    <connections>
+                        <outlet property="barChartView" destination="nLp-kK-DLU" id="5Zn-mM-xqr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWm-Sa-0m4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1666" y="1663"/>
+            <point key="canvasLocation" x="1670" y="1779"/>
         </scene>
         <!--Input View Controller-->
         <scene sceneID="Or3-oi-SVK">
@@ -448,7 +463,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBG-dV-hho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314" y="1663"/>
+            <point key="canvasLocation" x="1315" y="1779"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
