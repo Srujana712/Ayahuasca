@@ -26,7 +26,9 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         self.inputPickerView.dataSource = self
         
         pickerData = ["Video", "Photo", "Text/File", "Link (url, etc)", "Email Thread"]
-        
+        self.pickerCancelBtn.isHidden = true
+        self.pickerDoneBtn.isHidden = true
+        self.inputPickerView.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
