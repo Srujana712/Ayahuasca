@@ -29,16 +29,26 @@ class AnalysisViewController: UIViewController {
     
     func setChart(dataPoints: [String], values: [Double]) {
         barChartView.noDataText = "You need to provide data for chart."
+    
+        var dataEntries: [BarChartDataEntry] = []
         
-//        var dataEntries: [BarChartDataEntry] = []
-//        for i in 0..<dataPoints.count{
-//        
-//            let dataEntry = BarChartDataEntry(values[i], i)
-//            dataEntries.append(dataEntry)
-//        }
-//        let chartSetData = BarChartDataSet(values: dataEntries, label: "Units Sorked")
-//        let chartData = BarChartData(values: months, dataEntries: chartSetData)
-//        barChartView.data = chartData
+        for i in 0..<dataPoints.count {
+            _ = BarChartDataSet()
+            
+            let dataEntry = BarChartDataEntry(x: Double(i), yValues: [values[i]], label: "Test")
+                dataEntries.append(dataEntry)
+        }
+        let chartSetData = BarChartDataSet(values: dataEntries, label: "Units Worked")
+       // chartSetData.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
+        
+        let chartData = BarChartData(dataSet: chartSetData)
+        
+       // self.chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
+        
+        chartSetData.colors = ChartColorTemplates.colorful()
+        barChartView.data = chartData
+        
+      
     }
     /*
     // MARK: - Navigation
