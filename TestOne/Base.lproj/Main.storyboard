@@ -26,11 +26,15 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4i-x2-c6m">
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="Forgot Usename or Password"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Forgot Usename or Password">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhh-qQ-tH2">
-                                <state key="normal" title="Sign In"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="forgotUsrPwd" destination="BYZ-38-t0r" eventType="touchUpInside" id="Po3-Ak-qrk"/>
                                     <action selector="sucessfulSignIn" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wdj-Mv-IEN"/>
@@ -41,8 +45,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJD-jD-Pty">
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="Sign Up"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="userSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X73-h4-KSO"/>
                                 </connections>
@@ -103,6 +109,7 @@
                                     <segment title="Analysis"/>
                                     <segment title="Synthesis"/>
                                 </segments>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="switchContainerViews:" destination="8I9-jS-UAx" eventType="valueChanged" id="l1q-ZF-qAy"/>
                                 </connections>
@@ -175,12 +182,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gg6-au-qVE">
-                                        <state key="normal" title="Sign Up"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="246" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlg-Tb-hg3">
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Upload your profile pic"/>
+                                        <state key="normal" title="Upload your profile pic">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="selectProfilePicture:" destination="U8Y-NS-WyI" eventType="touchUpInside" id="agW-FJ-ZO3"/>
                                         </connections>
@@ -197,7 +203,9 @@
                                             <constraint firstAttribute="width" constant="62" id="eQu-DC-kal"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Add later"/>
+                                        <state key="normal" title="Add later">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="addLaterProfilePic:" destination="U8Y-NS-WyI" eventType="touchUpInside" id="F54-9F-60h"/>
                                         </connections>
@@ -223,6 +231,11 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gg6-au-qVE">
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="QpZ-8j-fFv" firstAttribute="leading" secondItem="Q6c-yM-Alv" secondAttribute="trailing" constant="24" id="0uK-wV-m8i"/>
@@ -258,7 +271,7 @@
                                     <constraint firstItem="anw-uR-NsS" firstAttribute="trailing" secondItem="MSf-Rz-bLy" secondAttribute="trailing" id="oet-Uo-4bj"/>
                                     <constraint firstItem="wx5-av-keg" firstAttribute="baseline" secondItem="0CX-Vo-FIR" secondAttribute="baseline" id="oyh-tR-U8n"/>
                                     <constraint firstItem="qT4-mO-1Fe" firstAttribute="top" secondItem="oju-Ib-bfW" secondAttribute="bottom" constant="22" id="qAd-no-qED"/>
-                                    <constraint firstItem="gg6-au-qVE" firstAttribute="top" secondItem="GiM-Xr-Q8v" secondAttribute="bottom" constant="56" id="qXT-NS-aS3"/>
+                                    <constraint firstItem="gg6-au-qVE" firstAttribute="top" secondItem="GiM-Xr-Q8v" secondAttribute="bottom" constant="15" id="qXT-NS-aS3"/>
                                     <constraint firstItem="anw-uR-NsS" firstAttribute="top" secondItem="qT4-mO-1Fe" secondAttribute="bottom" constant="20" id="v14-kS-MjO"/>
                                     <constraint firstItem="wx5-av-keg" firstAttribute="firstBaseline" secondItem="0CX-Vo-FIR" secondAttribute="baseline" id="whr-sU-ARX"/>
                                     <constraint firstItem="anw-uR-NsS" firstAttribute="firstBaseline" secondItem="mlg-Tb-hg3" secondAttribute="baseline" id="ww3-Xk-nNk"/>
@@ -277,6 +290,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="FOp-NL-fmw"/>
                     <connections>
+                        <outlet property="aboutYourself" destination="qT4-mO-1Fe" id="DcJ-dY-s0F"/>
                         <outlet property="addLaterProfilePic" destination="anw-uR-NsS" id="S2P-9k-mQM"/>
                         <outlet property="profilePicImageViwe" destination="GiM-Xr-Q8v" id="SoE-Oh-BQS"/>
                         <outlet property="uploadProfilePic" destination="mlg-Tb-hg3" id="Jyj-9K-QwX"/>
@@ -363,10 +377,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLp-kK-DLU" customClass="BarChartView" customModule="Charts">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nLp-kK-DLU" firstAttribute="trailing" secondItem="EaP-i7-eg1" secondAttribute="trailingMargin" id="6ZG-R3-O3y"/>
                             <constraint firstItem="8Xy-yZ-Xna" firstAttribute="top" secondItem="nLp-kK-DLU" secondAttribute="bottom" id="Ngb-yh-XQg"/>
@@ -399,19 +413,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZ5-pN-6Nl">
-                                <state key="normal" title="Done"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="doneActionPickerView:" destination="jtc-u0-ixf" eventType="touchUpInside" id="nyU-ra-6Ef"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMR-2a-Zem">
-                                <state key="normal" title="Select your input type"/>
+                                <state key="normal" title="Select your input type">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="selectInputAction:" destination="jtc-u0-ixf" eventType="touchUpInside" id="CRZ-Q5-Fja"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkQ-pT-DA6">
-                                <state key="normal" title="Cancel"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="cancelActionPickerView:" destination="jtc-u0-ixf" eventType="touchUpInside" id="DlL-eu-96c"/>
                                 </connections>

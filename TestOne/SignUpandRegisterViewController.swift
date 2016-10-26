@@ -13,10 +13,11 @@ class SignUpandRegisterViewController: UIViewController, UIImagePickerController
     @IBOutlet weak var uploadProfilePic: UIButton!
     @IBOutlet weak var profilePicImageViwe: UIImageView!
     @IBOutlet weak var addLaterProfilePic: UIButton!
+    @IBOutlet weak var aboutYourself: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.textViewDisplay()
         // Do any additional setup after loading the view.
     }
     
@@ -25,8 +26,15 @@ class SignUpandRegisterViewController: UIViewController, UIImagePickerController
         // Dispose of any resources that can be recreated.
     }
     
+    func textViewDisplay(){
+        aboutYourself.layer.cornerRadius = 5
+        aboutYourself.layer.borderColor = UIColor.gray.cgColor
+        aboutYourself.layer.borderWidth = 1
+    }
+    
     @IBAction func addLaterProfilePic(_ sender: AnyObject) {
         uploadProfilePic.isHidden = true
+        addLaterProfilePic.isHidden = true
     }
     
     @IBAction func selectProfilePicture(_ sender: AnyObject) {
@@ -41,6 +49,7 @@ class SignUpandRegisterViewController: UIViewController, UIImagePickerController
         profilePicImageViwe.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
         addLaterProfilePic.isHidden = true
+        uploadProfilePic.isHidden = true
     }
 
     /*
