@@ -35,20 +35,17 @@ class AnalysisViewController: UIViewController {
         for i in 0..<dataPoints.count {
             _ = BarChartDataSet()
             
-            let dataEntry = BarChartDataEntry(x: Double(i), yValues: [values[i]], label: "Test")
+            let dataEntry = BarChartDataEntry(x: Double(i), yValues: [values[i]], label:"Test")
                 dataEntries.append(dataEntry)
         }
         let chartSetData = BarChartDataSet(values: dataEntries, label: "Units Worked")
-       // chartSetData.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
-        
         let chartData = BarChartData(dataSet: chartSetData)
-        
-       // self.chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
-        
         chartSetData.colors = ChartColorTemplates.colorful()
         barChartView.data = chartData
         
-      
+        
+       // chartSetData.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
+       // self.chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
     }
     /*
     // MARK: - Navigation

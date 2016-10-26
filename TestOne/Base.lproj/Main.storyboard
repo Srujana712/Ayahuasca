@@ -198,6 +198,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Add later"/>
+                                        <connections>
+                                            <action selector="addLaterProfilePic:" destination="U8Y-NS-WyI" eventType="touchUpInside" id="F54-9F-60h"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50Y-ym-ej4">
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -274,6 +277,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="FOp-NL-fmw"/>
                     <connections>
+                        <outlet property="addLaterProfilePic" destination="anw-uR-NsS" id="S2P-9k-mQM"/>
                         <outlet property="profilePicImageViwe" destination="GiM-Xr-Q8v" id="SoE-Oh-BQS"/>
                         <outlet property="uploadProfilePic" destination="mlg-Tb-hg3" id="Jyj-9K-QwX"/>
                     </connections>
@@ -365,9 +369,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nLp-kK-DLU" firstAttribute="trailing" secondItem="EaP-i7-eg1" secondAttribute="trailingMargin" id="6ZG-R3-O3y"/>
-                            <constraint firstItem="nLp-kK-DLU" firstAttribute="top" secondItem="Sz0-o2-OXm" secondAttribute="bottom" id="GQr-9h-LVr"/>
-                            <constraint firstItem="nLp-kK-DLU" firstAttribute="leading" secondItem="EaP-i7-eg1" secondAttribute="leadingMargin" id="Oh8-Rh-CdF"/>
-                            <constraint firstItem="8Xy-yZ-Xna" firstAttribute="top" secondItem="nLp-kK-DLU" secondAttribute="bottom" id="ybV-0V-54d"/>
+                            <constraint firstItem="8Xy-yZ-Xna" firstAttribute="top" secondItem="nLp-kK-DLU" secondAttribute="bottom" id="Ngb-yh-XQg"/>
+                            <constraint firstItem="nLp-kK-DLU" firstAttribute="leading" secondItem="EaP-i7-eg1" secondAttribute="leadingMargin" id="w9U-Im-u0v"/>
+                            <constraint firstItem="nLp-kK-DLU" firstAttribute="top" secondItem="Sz0-o2-OXm" secondAttribute="bottom" id="zFv-Y3-HRj"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>

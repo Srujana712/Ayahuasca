@@ -9,21 +9,24 @@
 import UIKit
 
 class SignUpandRegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-   
-    @IBOutlet weak var uploadProfilePic: UIButton!
     
+    @IBOutlet weak var uploadProfilePic: UIButton!
     @IBOutlet weak var profilePicImageViwe: UIImageView!
+    @IBOutlet weak var addLaterProfilePic: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func addLaterProfilePic(_ sender: AnyObject) {
+        uploadProfilePic.isHidden = true
     }
     
     @IBAction func selectProfilePicture(_ sender: AnyObject) {
@@ -37,6 +40,7 @@ class SignUpandRegisterViewController: UIViewController, UIImagePickerController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         profilePicImageViwe.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
+        addLaterProfilePic.isHidden = true
     }
 
     /*
