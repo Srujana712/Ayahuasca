@@ -17,12 +17,14 @@ class LoginandSignUpViewController: UIViewController {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    var credentialsWorked: Bool = false
     
     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.buttonsStyling()
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -51,6 +53,17 @@ class LoginandSignUpViewController: UIViewController {
         
     }
     
+    func validateUserCredentials() -> Bool{
+        if ((userName.text! == "testuser") && (passwordField.text! == "password"))
+        {
+            credentialsWorked = true
+            return credentialsWorked
+        }
+        
+        return credentialsWorked
+    }
+
+    
     @IBAction func userSignUp(_ sender: AnyObject) {
 
         let signViewController: UIViewController = storyBoard.instantiateViewController(withIdentifier: "createProfilePage")
@@ -59,14 +72,20 @@ class LoginandSignUpViewController: UIViewController {
     
     @IBAction func sucessfulSignIn() {
         
-//          self.performSegueWithIdentifier("firstSetSegments", sender: self)
- 
-        let firstSetSegmentsViewController: UIViewController = storyBoard.instantiateViewController(withIdentifier: "firstSetSegments")
-        self.navigationController?.pushViewController(firstSetSegmentsViewController, animated: true)
+        let check:Bool = validateUserCredentials()
+        if(check){
+            let firstSetSegmentsViewController: UIViewController = storyBoard.instantiateViewController(withIdentifier: "firstSetSegments")
+            self.navigationController?.pushViewController(firstSetSegmentsViewController, animated: true)
+        }
+        else{
+        
+            let alert = UIAlertController(title: "InValid Credentials", message: "You have entered wrong username or password. Please try again. ", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func forgotUsrPwd() {
     }
-    
 }
 
