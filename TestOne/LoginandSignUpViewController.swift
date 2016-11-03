@@ -14,12 +14,15 @@ class LoginandSignUpViewController: UIViewController {
     @IBOutlet weak var signIn: UIButton!
     @IBOutlet weak var signUP: UIButton!
     @IBOutlet weak var forgotUsernamePass: UIButton!
+    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
     
     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.buttonsStyling()
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -37,7 +40,17 @@ class LoginandSignUpViewController: UIViewController {
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
-
+    
+    func buttonsStyling(){
+        signIn.layer.cornerRadius = 5
+        signIn.layer.borderWidth = 1
+        signIn.layer.borderColor = UIColor.black.cgColor
+        signIn.backgroundColor = UIColor.clear
+        userName.backgroundColor = UIColor.clear
+        passwordField.backgroundColor = UIColor.clear
+        
+    }
+    
     @IBAction func userSignUp(_ sender: AnyObject) {
 
         let signViewController: UIViewController = storyBoard.instantiateViewController(withIdentifier: "createProfilePage")

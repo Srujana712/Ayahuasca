@@ -32,7 +32,6 @@ class FirstSetSegmentsViewController: UIViewController {
             containerView!.segueIndentifierRecievedFromParent("analysis")
         case 3:
             containerView!.segueIndentifierRecievedFromParent("synthesis")
-
         default:
             containerView!.segueIndentifierRecievedFromParent("organizer")
 

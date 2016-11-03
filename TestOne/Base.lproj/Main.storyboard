@@ -27,7 +27,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4i-x2-c6m">
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Forgot Usename or Password">
+                                <state key="normal" title="Forgot Username or Password">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.73937985780000004" green="0.81885511379999998" blue="0.86716704840000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="IzN-pF-gnZ" firstAttribute="top" secondItem="IJh-Jz-md4" secondAttribute="bottom" constant="28" id="1Cw-ck-P67"/>
                             <constraint firstItem="IJh-Jz-md4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="67" id="5EJ-bW-8kX"/>
@@ -65,8 +65,8 @@
                             <constraint firstItem="Xhh-qQ-tH2" firstAttribute="top" secondItem="IzN-pF-gnZ" secondAttribute="bottom" constant="34" id="T7p-Ac-vWz"/>
                             <constraint firstItem="z4i-x2-c6m" firstAttribute="top" secondItem="Xhh-qQ-tH2" secondAttribute="bottom" constant="21" id="ay7-AN-FHP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IzN-pF-gnZ" secondAttribute="trailing" constant="68" id="chk-Ye-OtK"/>
-                            <constraint firstItem="Xhh-qQ-tH2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="126" id="nT1-e8-XLv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Xhh-qQ-tH2" secondAttribute="trailing" constant="127" id="rnh-hY-K3Y"/>
+                            <constraint firstItem="Xhh-qQ-tH2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="67" id="nT1-e8-XLv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xhh-qQ-tH2" secondAttribute="trailing" constant="68" id="rnh-hY-K3Y"/>
                             <constraint firstItem="IzN-pF-gnZ" firstAttribute="top" secondItem="IJh-Jz-md4" secondAttribute="bottom" constant="28" id="sh0-rj-4NM"/>
                             <constraint firstItem="Xhh-qQ-tH2" firstAttribute="top" secondItem="IzN-pF-gnZ" secondAttribute="bottom" constant="34" id="wgv-Hp-uQ7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="z4i-x2-c6m" secondAttribute="trailing" constant="26" id="zKJ-rn-sua"/>
@@ -76,13 +76,15 @@
                     <navigationItem key="navigationItem" id="xVc-9i-bS5"/>
                     <connections>
                         <outlet property="forgotUsernamePass" destination="z4i-x2-c6m" id="m4Q-ez-dG5"/>
+                        <outlet property="passwordField" destination="IzN-pF-gnZ" id="1O6-OJ-JL9"/>
                         <outlet property="signIn" destination="Xhh-qQ-tH2" id="G2c-qU-WOL"/>
                         <outlet property="signUP" destination="VJD-jD-Pty" id="u9b-OL-r27"/>
+                        <outlet property="userName" destination="IJh-Jz-md4" id="74z-hp-OD8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1537" y="265"/>
+            <point key="canvasLocation" x="1536.5" y="264.5"/>
         </scene>
         <!--First Set Segments View Controller-->
         <scene sceneID="twD-He-T2x">
